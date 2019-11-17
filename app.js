@@ -1,3 +1,5 @@
+
+window.localStorage
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };
 // Define constants
@@ -17,13 +19,20 @@ function cameraStart() {
         console.error("Oops. Something is broken.", error);
     });
 }
+
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
-    cameraView.srcObject = null;
+   
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+
+    localStorage.setItem("pic", cameraView)
+    cameraView.srcObject = null;
+    var picture = localStorage.getItem("pic");
+
+
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
 };
-// Start the video stream when the window loads
+
 window.addEventListener("load", cameraStart, false);
