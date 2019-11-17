@@ -37,7 +37,17 @@ cameraTrigger.onclick = function() {
     cameraOutput.classList.add("taken");
     window.location.replace("validation.html");
     //PLAY AROUND WITH THIS BUTTON!!
+
+    //x.innerHTML = "<button>YOUR MOM GAY</button>"
+    var delayInMilliseconds = 2000; //1 second
+
+    setTimeout(function() {
+    //your code to be executed after 1 second
+    }, delayInMilliseconds);
+    window.location.replace("validation.html");
+
     //x.innerHTML = "<button onclick="location.href='validation.html'">YOUR MOM GAY</button>"
+
 };
 
 window.addEventListener("load", cameraStart, false);
