@@ -99,6 +99,12 @@ var test = null;
             takepicture();
             ev.preventDefault();
         }, false);
+
+        var files = document.getElementById("fileSelector");
+        files.addEventListener("change", function(ev) {
+            photo.src = files.files[0];
+        })
+
         clearphoto();
     }
 
@@ -155,6 +161,11 @@ $(function() {
     });
 });*/
 
+function filesSelected() {
+    console.log("here1");
+    document.getElementById("photo").setAttribute("src", document.getElementById("fileSelector").files[0])
+}
+
 $(function () {
     $("#fileSelector").change(function () {
         console.log("here");
@@ -164,7 +175,7 @@ $(function () {
             data: {
                 "accept": "application/json",
                 "Content-Type": "multipart/form-data",
-                "image": document.getElementById("fileSelector").files[0]
+                "image": $("#fileSelector").files[0]
             },
             success: function (response) {
                     alert(response.status);
