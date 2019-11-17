@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Name of your awesome camera app -->
+    <title>Spot-a-Vibe</title>
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="style.css">
 <style>
 .center {
   display: block;
@@ -8,35 +15,31 @@
   margin-right: auto;
   width: 50%;
 }
-
-
-
 body {background-color: #99ffcc;}
 h1   {color: aaff00;
-	  text-align: center;
-	  text-shadow: 2px 2px white;
-	  font-size: 80px;
-	  font-family: Arial, Helvetica, sans-serif;
-	}
-
+    text-align: center;
+    text-shadow: 2px 2px white;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 p    {color: green;
-	    text-shadow: 1px 1px white;
-		text-align: center;
-		font-size: 40px;
-	    font-family: Arial, Helvetica, sans-serif;
-
-		}
+      text-shadow: 1px 1px white;
+    text-align: center;
+    font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 .button {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 50px;
   text-align: center;
+  font-size: 30px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  
   display: block;
-  max-width: 300px;
+  max-width: 500px;
   margin: auto;
   cursor: pointer;
   
@@ -45,9 +48,18 @@ p    {color: green;
 </head>
 <body>
 
+
+
+
+
 <h1>SPOT-A-VIBE</h1>
 <p>Welcome to Spot-a-Vibe</p>
-<button class="button">CAMERA</button>
+<button  onclick="location.href='camera.html'" type="button" class="button">Take Picture</button>
+
+ 
+<script src="app.js"></script>
+
+
 <img src="logo.png" class="center">
 
 </body>
