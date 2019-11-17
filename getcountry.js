@@ -28,7 +28,7 @@ $.getJSON(api_site, function(data) {
         }
     }
     var finaltext = text.substring(last_comma + 2, text.length);
-    x.innerHTML = finaltext;
+    x.innerHTML = "<h2><b><i>" + finaltext + "</i></b></h2>";
     //$(".mypanel").html(finaltext);
 });
 }
