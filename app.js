@@ -19,7 +19,7 @@ function cameraStart() {
 }
 // Take a picture when cameraTrigger is tapped
 cameraTrigger.onclick = function() {
-    cameraSensor.style.visibility="hidden"
+    cameraView.srcObject = null;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
