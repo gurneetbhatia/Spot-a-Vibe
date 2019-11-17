@@ -1,6 +1,7 @@
 
 var x = document.getElementById("demo");
 
+
 window.localStorage
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };
@@ -27,12 +28,12 @@ cameraTrigger.onclick = function() {
    
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-
+    
     localStorage.setItem("pic", cameraView);
     cameraView.srcObject = null;
     var picture = localStorage.getItem("pic");
 
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    
     cameraOutput.classList.add("taken");
     window.location.replace("validation.html");
     //PLAY AROUND WITH THIS BUTTON!!
@@ -43,5 +44,5 @@ window.addEventListener("load", cameraStart, false);
 
 function loadPic(){
     console.log("picture loaded");
-document.getElementById("pic").src=localStorage.getItem("pic")[0];
+
 }
