@@ -1,4 +1,6 @@
 
+var x = document.getElementById("demo");
+
 window.localStorage
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };
@@ -30,9 +32,10 @@ cameraTrigger.onclick = function() {
     cameraView.srcObject = null;
     var picture = localStorage.getItem("pic");
 
-
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
+    //PLAY AROUND WITH THIS BUTTON!!
+    x.innerHTML = "<button>YOUR MOM GAY</button>"
 };
 
 window.addEventListener("load", cameraStart, false);
