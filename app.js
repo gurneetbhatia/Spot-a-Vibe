@@ -34,8 +34,14 @@ cameraTrigger.onclick = function() {
 
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
+    window.location.replace("validation.html");
     //PLAY AROUND WITH THIS BUTTON!!
-    x.innerHTML = "<button onclick="location.href='validation.html'">YOUR MOM GAY</button>"
+    //x.innerHTML = "<button onclick="location.href='validation.html'">YOUR MOM GAY</button>"
 };
 
 window.addEventListener("load", cameraStart, false);
+
+function loadPic(){
+    console.log("picture loaded");
+document.getElementById("pic").src=localStorage.getItem("pic")[0];
+}
