@@ -27,7 +27,7 @@ cameraTrigger.onclick = function() {
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
 
     localStorage.setItem("pic", cameraView)
-    //cameraView.srcObject = null;
+    cameraView.srcObject = null;
     var picture = localStorage.getItem("pic");
 
 
