@@ -7,7 +7,6 @@
 		alert(data);
 	}
 })*/
-
 $.ajax({
     url: 'http://max-scene-classifier.max.us-south.containers.appdomain.cloud/model/predict',
     method: 'POST',
@@ -16,9 +15,6 @@ $.ajax({
         "Content-Type": "multipart/form-data",
         "image": file
     },
-    /*files: {
-        "image": file
-    },*/
     success: function (response) {
             alert(response.status);
     },
