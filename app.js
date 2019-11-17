@@ -26,9 +26,9 @@ cameraTrigger.onclick = function() {
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
 
-    //localStorage.setItem("pic", cameraView)
+    localStorage.setItem("pic", cameraView)
     //cameraView.srcObject = null;
-    //var picture = localStorage.getItem("pic");
+    var picture = localStorage.getItem("pic");
 
 
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
