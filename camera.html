@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,12 +43,12 @@ p    {color: green;
   font-size: 30px;
   text-decoration: none;
   display: inline-block;
-  
+
   display: block;
   max-width: 500px;
   margin: auto;
   cursor: pointer;
-  
+
 }
 </style>
 </head>
@@ -58,19 +59,22 @@ p    {color: green;
 
 
 <h1>CAMERA</h1>
+<div class="camera">
+   <video id="video">Video stream not available.</video>
+   <button id="startbutton">Take photo</button>
+ </div>
+ <canvas id="canvas">
+ </canvas>
+ <div class="output">
+   <img id="photo" alt="The screen capture will appear in this box.">
+ </div>
 
-
- <!-- Camera -->
-    <main id="camera">
-        <!-- Camera sensor -->
+    <!--<main id="camera">
         <canvas id="camera--sensor"></canvas>
-        <!-- Camera view -->
         <video id="camera--view" autoplay playsinline></video>
-        <!-- Camera output -->
         <img src="//:0" alt="" id="camera--output">
-        <!-- Camera trigger -->
-        <button onclick="location.href='validation.html'"id="camera--trigger">Take a picture</button>
-    </main>
+        <button onclick="location.href='validation.html'"id="camera--trigger">Take a picture</button></main>-->
+
 <script src="app.js"></script>
 
 
