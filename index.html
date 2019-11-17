@@ -8,6 +8,7 @@
     <title>Spot-a-Vibe</title>
     <!-- Link to your main style sheet-->
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <style>
 .center {
   display: block;
@@ -56,14 +57,13 @@ p    {color: green;
 </head>
 <body>
 
-
-
-
-
 <h1>SPOT-A-VIBE</h1>
 <p>Welcome to Spot-a-Vibe</p>
 <button  onclick="location.href='camera.html'" type="button" class="button">Take Picture</button>
-
+<br>
+<button onclick="getLocation()" type = "button" class = "button">Get Location</button>
+<p id="demo"></p>
+<script src="getcountry.js"></script>
  
 <script src="app.js"></script>
 <script src="script.js"></script>

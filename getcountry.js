@@ -6,6 +6,7 @@ var longi;
 var latit;
 
 function getLocation() {
+    
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
@@ -27,7 +28,8 @@ $.getJSON(api_site, function(data) {
         }
     }
     var finaltext = text.substring(last_comma + 2, text.length);
-    $(".mypanel").html(finaltext);
+    x.innerHTML = finaltext;
+    //$(".mypanel").html(finaltext);
 });
 }
 
